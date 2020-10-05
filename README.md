@@ -11,6 +11,7 @@ Lees de instructies op de wiki pagina hoe de robotarm bibliotheek werkt. Vervolg
   robotArm.loadLevel("exercise 1");
 
   // Je eigen code plaats je hier.
+  
 
   robotArm.run();
 </script>
