@@ -11,7 +11,10 @@ Lees de instructies op de wiki pagina hoe de robotarm bibliotheek werkt. Vervolg
   robotArm.loadLevel("exercise 1");
 
   // Je eigen code plaats je hier.
-  
+        robotArm.moveRight();
+        robotArm.grab();
+        robotArm.moveLeft();
+        robotArm.drop();
 
   robotArm.run();
 </script>
@@ -29,7 +32,36 @@ Verplaats het rode blok één plek naar links.
   robotArm.loadLevel("exercise 2");
 
   // Je eigen code plaats je hier.
+        robotArm.grab();
+                for(var i=0; i<9; i++){
+                    robotArm.moveRight();
+                }
 
+                robotArm.drop();
+
+                for(var i=0; i<5; i++){
+                    robotArm.moveLeft();
+                }
+
+                robotArm.grab();
+
+                for(var i=0; i<5; i++){
+                    robotArm.moveRight();
+                }
+
+                robotArm.drop();
+
+                for(var i=0; i<2; i++){
+                    robotArm.moveLeft();
+                }
+
+                robotArm.grab();
+
+                for(var i=0; i<2; i++){
+                    robotArm.moveRight();
+                }
+
+                robotArm.drop();
   robotArm.run();
 </script>
 ```
@@ -45,7 +77,13 @@ Stappel alle blokken op aan de rechterkant.
 
   robotArm.loadLevel("exercise 3");
 
-  // Je eigen code plaats je hier.
+          for(var i=0; i<4; i++){
+                    robotArm.grab();
+                    robotArm.moveRight();
+                    robotArm.drop();
+                    robotArm.moveLeft();
+                }
+            
 
   robotArm.run();
 </script>
@@ -63,6 +101,55 @@ Verplaats de hele stapel blokken één plek naar rechts.
   robotArm.loadLevel("exercise 4");
 
   // Je eigen code plaats je hier.
+            robotArm.grab();
+
+                for(var i=0; i<2; i++){
+                    robotArm.moveRight();
+                }
+
+                robotArm.drop();
+
+                for(var i=0; i<2; i++){
+                    robotArm.moveLeft();
+                }
+
+                robotArm.grab();
+
+                for(var i=0; i<3; i++){
+                    robotArm.moveRight();
+                }
+
+                robotArm.drop();
+
+                for(var i=0; i<3; i++){
+                    robotArm.moveLeft();
+                }
+
+                robotArm.grab();
+
+                robotArm.moveRight();
+
+                robotArm.drop();
+
+                for(var i=0; i<2; i++){
+                    robotArm.moveRight();
+                }
+
+                robotArm.grab();
+
+                for(var i=0; i<2; i++){
+                    robotArm.moveLeft();
+                }
+
+                robotArm.drop();
+
+                robotArm.moveRight();
+
+                robotArm.grab();
+
+                robotArm.moveLeft();
+
+                robotArm.drop();
 
   robotArm.run();
 </script>
