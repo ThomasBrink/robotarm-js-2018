@@ -235,6 +235,24 @@ Je mag maximaal 13 regels code gebruiken!
   robotArm.loadLevel("exercise 8");
 
   // Je eigen code plaats je hier.
+                var blok = 0;
+
+                    robotArm.moveRight();
+
+                    while(blok < 7){
+                        robotArm.grab();
+                        for(var i=0; i<8; i++){
+                            robotArm.moveRight();
+                            }
+                                robotArm.drop();
+
+                                    for(var i=0; i<8; i++){
+                                        robotArm.moveLeft();
+                            }
+                        blok++;
+                    }
+
+                    robotArm.moveLeft();
 
   robotArm.run();
 </script>

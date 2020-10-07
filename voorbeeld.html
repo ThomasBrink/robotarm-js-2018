@@ -9,28 +9,28 @@
             robotArm.speed = 250;
             
             // Het level inladen
-            robotArm.loadLevel("exercise 7");
+            robotArm.loadLevel("exercise 8");
             // robotArm.randomLevel(1);
 
             // Jou instructies volgen hier
+                var blok = 0;
 
-                    for(var i=0; i<5; i++){
-                        robotArm.moveRight();
+                    robotArm.moveRight();
+
+                    while(blok < 7){
                         robotArm.grab();
-                        robotArm.moveLeft();
-                        robotArm.drop();
+                        for(var i=0; i<8; i++){
+                            robotArm.moveRight();
+                            }
+                                robotArm.drop();
 
+                                    for(var i=0; i<8; i++){
+                                        robotArm.moveLeft();
+                            }
+                        blok++;
+                    }
 
-                        robotArm.moveRight();
-                        robotArm.moveRight();
-                        
-                   }
-
-                   for(var i=0; i<10; i++){
-                        robotArm.moveLeft();
-                   }
-        
-                    
+                    robotArm.moveLeft();
             // De door jou opgegeven instructies uitvoeren
             robotArm.run();
 
