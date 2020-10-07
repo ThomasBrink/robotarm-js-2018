@@ -9,36 +9,88 @@
             robotArm.speed = 250;
             
             // Het level inladen
-            robotArm.loadLevel("exercise 7");
+            robotArm.loadLevel("exercise 9");
             // robotArm.randomLevel(1);
 
             // Jou instructies volgen hie
-            var block = 0;
+            var blok = 0;
+            var blok2 = 0;
+            var blok3 = 0;
+            var blok4 = 0;
+                    while(blok < 1 ){
+                        robotArm.grab();
 
-                while(block < 6){
-
-                    for(var i=0; i<4; i++){
+                        for(var i=0; i<6; i++){
                             robotArm.moveRight();
-                            robotArm.grab();
-                            robotArm.moveLeft();
-                            robotArm.drop();
+                        }
 
+                        robotArm.drop();
 
-                            robotArm.moveRight();
-                            robotArm.moveRight();
-                            
-                       }
-                            robotArm.moveRight();
-                            robotArm.grab();
-                            robotArm.moveLeft();
-                            robotArm.drop();
-
-                        for(var i=0; i<10; i++){
+                        for(var i=0; i<6; i++){
                             robotArm.moveLeft();
                         }
 
-                        block++;
-                }
+                        blok++;
+
+                    }
+
+                robotArm.moveRight();
+
+                    while(blok2 < 2){
+                        robotArm.grab();
+
+                        for(var i=0; i<6; i++){
+                            robotArm.moveRight();
+                        }
+
+                        robotArm.drop();
+
+                        for(var i=0; i<6; i++){
+                            robotArm.moveLeft();
+                        }
+
+                        blok2++;
+
+                    }
+
+                robotArm.moveRight();
+
+                    while(blok3 < 3){
+                        robotArm.grab();
+
+                        for(var i=0; i<6; i++){
+                            robotArm.moveRight();
+                        }
+
+                        robotArm.drop();
+
+                        for(var i=0; i<6; i++){
+                            robotArm.moveLeft();
+                        }
+
+                        blok3++;
+
+                    }
+
+                robotArm.moveRight();
+
+                    while(blok4 < 4){
+                        robotArm.grab();
+
+                        for(var i=0; i<6; i++){
+                            robotArm.moveRight();
+                        }
+
+                        robotArm.drop();
+
+                        for(var i=0; i<6; i++){
+                            robotArm.moveLeft();
+                        }
+
+                        blok4++;
+
+                    }
+            
             // De door jou opgegeven instructies uitvoeren
             robotArm.run();
 
