@@ -167,6 +167,23 @@ Verplaats de hele stapel blokken één plek naar rechts. Zorg ervoor dat de volg
   robotArm.loadLevel("exercise 6");
 
   // Je eigen code plaats je hier.
+        for(var i=0; i<7; i++){
+                robotArm.moveRight();
+            }
+
+            robotArm.grab();
+
+            robotArm.moveRight();
+
+            robotArm.drop();
+
+            for(var i=0; i<7; i++){
+                robotArm.moveLeft();
+                robotArm.moveLeft();
+                robotArm.grab();
+                robotArm.moveRight();
+                robotArm.drop();
+            }
 
   robotArm.run();
 </script>
