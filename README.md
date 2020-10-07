@@ -201,22 +201,32 @@ Verplaats alle blokken één plek naar rechts. Zorg ervoor dat de volgorde van d
   robotArm.loadLevel("exercise 7");
 
   // Je eigen code plaats je hier.
-                for(var i=0; i<5; i++){
-                        robotArm.moveRight();
-                        robotArm.grab();
-                        robotArm.moveLeft();
-                        robotArm.drop();
+                var block = 0;
+
+                while(block < 6){
+
+                    for(var i=0; i<4; i++){
+                            robotArm.moveRight();
+                            robotArm.grab();
+                            robotArm.moveLeft();
+                            robotArm.drop();
 
 
-                        robotArm.moveRight();
-                        robotArm.moveRight();
-                        
-                   }
+                            robotArm.moveRight();
+                            robotArm.moveRight();
+                            
+                       }
+                            robotArm.moveRight();
+                            robotArm.grab();
+                            robotArm.moveLeft();
+                            robotArm.drop();
 
-                    for(var i=0; i<10; i++){
-                        robotArm.moveLeft();
-                    }
-        
+                        for(var i=0; i<10; i++){
+                            robotArm.moveLeft();
+                        }
+
+                        block++;
+                }
   robotArm.run();
 </script>
 ```
