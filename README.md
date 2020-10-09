@@ -282,6 +282,84 @@ Je mag maximaal 13 regels code gebruiken!
   robotArm.loadLevel("exercise 9");
 
   // Je eigen code plaats je hier.
+                var blok = 0;
+            var blok2 = 0;
+            var blok3 = 0;
+            var blok4 = 0;
+                    while(blok < 1 ){
+                        robotArm.grab();
+
+                        for(var i=0; i<6; i++){
+                            robotArm.moveRight();
+                        }
+
+                        robotArm.drop();
+
+                        for(var i=0; i<6; i++){
+                            robotArm.moveLeft();
+                        }
+
+                        blok++;
+
+                    }
+
+                robotArm.moveRight();
+
+                    while(blok2 < 2){
+                        robotArm.grab();
+
+                        for(var i=0; i<6; i++){
+                            robotArm.moveRight();
+                        }
+
+                        robotArm.drop();
+
+                        for(var i=0; i<6; i++){
+                            robotArm.moveLeft();
+                        }
+
+                        blok2++;
+
+                    }
+
+                robotArm.moveRight();
+
+                    while(blok3 < 3){
+                        robotArm.grab();
+
+                        for(var i=0; i<6; i++){
+                            robotArm.moveRight();
+                        }
+
+                        robotArm.drop();
+
+                        for(var i=0; i<6; i++){
+                            robotArm.moveLeft();
+                        }
+
+                        blok3++;
+
+                    }
+
+                robotArm.moveRight();
+
+                    while(blok4 < 4){
+                        robotArm.grab();
+
+                        for(var i=0; i<6; i++){
+                            robotArm.moveRight();
+                        }
+
+                        robotArm.drop();
+
+                        for(var i=0; i<6; i++){
+                            robotArm.moveLeft();
+                        }
+
+                        blok4++;
+
+                    }
+            
 
   robotArm.run();
 </script>
@@ -301,6 +379,48 @@ Je mag maximaal 15 regels code gebruiken!
   robotArm.loadLevel("exercise 10");
 
   // Je eigen code plaats je hier.
+        var Op = 0;
+                var Right = 1;
+                var Tw = 2;
+                var EnP = 2;
+                var TwP = 2;
+
+                for(var i=0; i<4; i++){
+                        robotArm.moveRight();
+                    }
+
+                do{
+
+                    robotArm.grab();
+
+                    for(var i=0; i<Right; i++){
+                        robotArm.moveRight();
+                    }
+
+                    robotArm.drop();
+
+                    for(var i=0; i<Tw; i++){
+                        robotArm.moveLeft();
+                    }
+
+                    for(var i=0; i<EnP; i++){
+                        Right++
+                    }
+
+                    for(var i=0; i<TwP; i++){
+                        Tw++
+                    }
+
+                    EnP--
+                    TwP--
+                    Op++
+                    EnP++
+                    TwP++
+
+                }
+
+
+                while(Op < 5)
 
   robotArm.run();
 </script>
