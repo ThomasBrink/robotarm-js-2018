@@ -9,58 +9,33 @@
             robotArm.speed = 250;
             
             // Het level inladen
-            robotArm.loadLevel("exercise 13");
+            robotArm.loadLevel("exercise 11");
             // robotArm.randomLevel(1);
 
             // Jou instructies volgen hier
-                var Left = 10;
-                var rechts = 10;
+            for(var i=0; i<9; i++){
+                robotArm.moveRight();
+            }
 
-                var move = true;
-                while(move == true){
-                    robotArm.moveRight();
+                for(var i=0; i<9; i++){
                     robotArm.grab();
                     var color = robotArm.scan();
-                    if(color != null){
-                        rechts--
+                    if(color == "white"){
 
-                        for(var i=0; i<rechts; i++){
-
-                            robotArm.moveRight();
-                            }
-
-                            
-
-                            robotArm.drop();
-
-                            Left--
-
-                        for(var i=0; i<Left; i++){
-                            robotArm.moveLeft();
-                        }
-
-
-
+                        robotArm.moveRight();
+                        robotArm.drop();
+                        robotArm.moveLeft();
+                        robotArm.moveLeft();
+                        
                     } 
-                    else {
-                        move = false;
+                    else{
+                        robotArm.drop();
+                        robotArm.moveLeft();
                     }
+
+                   
                 }
 
-                    for(var i=0; i<11; i++){
-                        robotArm.moveLeft();
-                    }
-                    robotArm.grab();
-
-                    for(var i=0; i<11; i++){
-                        robotArm.moveRight();
-                    }
-
-                    robotArm.drop();
-
-                    for(var i=0; i<11; i++){
-                        robotArm.moveLeft();
-                    }
 
 
                 
