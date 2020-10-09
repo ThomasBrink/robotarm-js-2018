@@ -478,6 +478,54 @@ Let op, de blokken zijn iedere keer anders als je het programma start!
   robotArm.randomLevel( 1, 8);
 
   // Je eigen code plaats je hier.
+          var Left = 10;
+                var rechts = 10;
+
+                var move = true;
+                while(move == true){
+                    robotArm.moveRight();
+                    robotArm.grab();
+                    var color = robotArm.scan();
+                    if(color != null){
+                        rechts--
+
+                        for(var i=0; i<rechts; i++){
+
+                            robotArm.moveRight();
+                            }
+
+                            
+
+                            robotArm.drop();
+
+                            Left--
+
+                        for(var i=0; i<Left; i++){
+                            robotArm.moveLeft();
+                        }
+
+
+
+                    } 
+                    else {
+                        move = false;
+                    }
+                }
+
+                    for(var i=0; i<11; i++){
+                        robotArm.moveLeft();
+                    }
+                    robotArm.grab();
+
+                    for(var i=0; i<11; i++){
+                        robotArm.moveRight();
+                    }
+
+                    robotArm.drop();
+
+                    for(var i=0; i<11; i++){
+                        robotArm.moveLeft();
+                    }
 
   robotArm.run();
 </script>
